@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather - Meteo in tempo reale</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav>
+    <div class="logo">
+      <a href="index.html">Weather</a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="informazioni.html">Informazioni</a>
+      <a href="contatti.html">Contatti</a>
+    </div>
+  </nav>
+
+  <!-- Header / Sezione Hero -->
+  <header class="hero">
+    <h1>Benvenuti su Weather</h1>
+    <p>Meteo in tempo reale per ogni città e paese europeo</p>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+    <div id="weatherApp">
+      <div class="form-group">
+        <label for="country">Seleziona Paese:</label>
+        <select id="country">
+          <option value="IT" selected>Italia</option>
+          <option value="FR">Francia</option>
+          <option value="DE">Germania</option>
+          <option value="ES">Spagna</option>
+          <option value="NL">Paesi Bassi</option>
+          <option value="BE">Belgio</option>
+          <option value="AT">Austria</option>
+          <option value="SE">Svezia</option>
+          <option value="FI">Finlandia</option>
+          <option value="PT">Portogallo</option>
+          <option value="PL">Polonia</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input type="text" id="city" list="citySuggestions" placeholder="Inserisci una città (es. Roma)" />
+        <datalist id="citySuggestions"></datalist>
+      </div>
+      <button id="fetchWeather">Cerca</button>
+      <div id="result"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Weather. Tutti i diritti riservati.</p>
+  </footer>
+
+  <!-- Inclusione file JavaScript -->
+  <script src="js/script.js"></script>
+</body>
+</html>
